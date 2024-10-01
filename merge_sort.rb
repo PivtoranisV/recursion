@@ -7,6 +7,7 @@ def merge_sort(arr)
 
   left = merge_sort(arr[0...mid])
   right = merge_sort(arr[mid..])
+  merge(left, right)
 end
 
 def merge(arr1, arr2)
@@ -23,4 +24,4 @@ def merge(arr1, arr2)
   sorted_array.concat(arr1).concat(arr2)
 end
 
-p merge([3], [1])
+p merge_sort([105, 79, 100, 110])
